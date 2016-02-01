@@ -1,0 +1,29 @@
+
+<!--exemplo de inclusão de conteudo com o recurso include--><!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Testando Jade - introdução/revisão</title>
+    <link href="#" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper"><a href="http://tutsplus.com" class="global-nav__header-tuts-logo-link"><img alt="tuts+" src="tuts_logo.svg" class="global-nav__header-tuts-logo-image"></a><span class="page-footer__tuts-brand-text">
+          <!--note que apontamos para um arquivo localizado em uma pasta de nome include. não é necessário especificar a extensão do arquivo que deve ser incluso, a não ser que não se trate de um arquivo .jade (exemplo, .md)-->testando inclusão de conteúdo com INCLUDE</span></div>
+    </nav>
+    <main class="wrapper">
+      <!--inserindo conteúdo do arquivo extendido com o recurso block. ver arquivo template_extends_block.jade-->
+      <h1>
+        <!--note que reutilizamos o block title que acabamos de criar, abaixo, que replica o mesmo titulo da página-->Testando Jade - introdução/revisão
+      </h1>
+      <p>Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.</p>
+      <ul>
+        <li><a>link um</a></li>
+        <li><a>link dois</a></li>
+        <li><a>link tres</a></li>
+        <li><a>link quatro</a></li>
+        <li><a>link cinco</a></li>
+      </ul>
+      <p>Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.</p>
+    </main>
+  </body>
+</html>

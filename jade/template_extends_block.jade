@@ -1,0 +1,22 @@
+//exemplo do inclusão de conteudo com o recurso extends. note que dentro do arquivo que estamos importando, também utilizamos os recursos de include do exemplo anterior, que continuam operando normalmente.
+extends template_base_include
+
+//outra forma de utilizarmos conteudos pré definidos no template, é através do recurso block. com ele podemos criar blocos de códigos em um mesmo arquivo, ao invés de incluir arquivos separados
+block title
+  | Testando Jade - introdução/revisão
+  
+block content
+  h1
+    //note que reutilizamos o block title que acabamos de criar, abaixo, que replica o mesmo titulo da página
+    block title
+
+  p Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.
+  
+  ul
+    li: a link um
+    li: a link dois
+    li: a link tres
+    li: a link quatro
+    li: a link cinco
+      
+  p Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.

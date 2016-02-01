@@ -1,0 +1,21 @@
+//exemplo de inclusão de conteudo com o recurso include
+doctype
+html(lang="pt-br")
+    head
+        title
+            block title
+        block metatags
+        block linktags
+            link(href="#", rel="stylesheet", type="text/css")
+    body
+        nav
+            .wrapper
+                a.global-nav__header-tuts-logo-link(href="http://tutsplus.com")
+                    img.global-nav__header-tuts-logo-image(alt="tuts+", src="tuts_logo.svg")
+                span.page-footer__tuts-brand-text
+                    //note que apontamos para um arquivo localizado em uma pasta de nome include. não é necessário especificar a extensão do arquivo que deve ser incluso, a não ser que não se trate de um arquivo .jade (exemplo, .md)
+                    include include/headertext
+        main.wrapper
+            //inserindo conteúdo do arquivo extendido com o recurso block. ver arquivo template_extends_block.jade
+            block content
+                | Default conteúdo padrão
