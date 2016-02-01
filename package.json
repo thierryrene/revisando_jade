@@ -1,0 +1,17 @@
+{
+  "name": "testando_jade",
+  "version": "1.0.0",
+  "description": "testenado jade > HTML",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thierry rene",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "jade": "^1.11.0"
+  }
+}
