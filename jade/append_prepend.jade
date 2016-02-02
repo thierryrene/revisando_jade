@@ -1,29 +1,29 @@
-//testando append e prepend
+//- testando append e prepend
 
-//importamos o arquivo padrão do template
+//- importamos o arquivo padrão do template
 extends template_base_include
 
-//editamos o block title para o titulo da página em questão
+//- editamos o block title para o titulo da página em questão
 block title
     | Testando Jade - append and prepend
-//testamos o prepend. esse recurso adiciona conteudo no inicio do elemento em questão, neste caso, apontamos para o block content, que declaramos no arquivo template_base_include.jade
+//- testamos o prepend. esse recurso adiciona conteudo no inicio do elemento em questão, neste caso, apontamos para o block content, que declaramos no arquivo template_base_include.jade
 block prepend content
     | inicio...
-//testamos o append. o recurso funciona da mesma maneira que o prepend, porém adiciona conteudo ao fim do elemento.
+//- testamos o append. o recurso funciona da mesma maneira que o prepend, porém adiciona conteudo ao fim do elemento.
 block append content
     | fim...
-//note que o conteúdo declarado com o append e prepend estão devidamente posicionados, junto ao conteúdo padrão do block content
+//- note que o conteúdo declarado com o append e prepend estão devidamente posicionados, junto ao conteúdo padrão do block content
 
-//testes funcionais com append e prepend
+//- testes funcionais com append e prepend
 
-//incluindo meta tags
-//fora criado um block metatags e um block linktags no arquivo template_base_include.jade
+//- incluindo meta tags
+//- fora criado um block metatags e um block linktags no arquivo template_base_include.jade
 block prepend metatags
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale-1.0")
-    meta(name="description", content="descrição da página")
 
 block append linktags
-    link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css", type="text/css", rel="stylesheet")
+    link(href="//- maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css", type="text/css", rel="stylesheet")
+    
     
