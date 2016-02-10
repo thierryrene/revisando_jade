@@ -1,0 +1,15 @@
+//- testando a alterações nas configurações via variável
+
+//- primeiro utilizamos o extends para gerar o template baseado no arquivo template_base_include.jade
+extends template_base_include
+
+//- no arquivo template_base_include.jade, transformamos o include do arquivo de configuração __config.jade em um block.
+
+//- neste arquivo, editamos o block config (que porta as configurações) com o recurso append
+block append config
+    //- declaramos novamente a variável PageTitle, que armazena o titulo padrão do template, sobscrevendo seu valor atual pelo velor abaixo.
+    - var PageTitle = "Revisando Jade - alterando configuração template com variáveis"
+    //- note que podemos criar diversas páginas com estas mesmas linhas de código, apenas mudando os valores das variáveis. no arquivo __config.jade, o jQuery está inativo por padrão definido como false. aqui definimos o jQuery como true, e o recurso é compilado no arquivo gerado.
+    - var jQuery = true
+    
+    

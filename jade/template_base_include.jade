@@ -1,8 +1,8 @@
 //- arquivo de exemplo de inclusão de conteudo com o recurso include
 
-//- 
+//- importamos o arquivo de configuração em um block config, para viabilizar a configuração dos templates com base em variáveis
 block config
-    //- importando arquivo de configuração do template
+    //- importando arquivo de configuração do template dentro do block, o que nos permite editar o mesmo com o recurso append, no arquivo manual_config_with_variables.jade
     include __config.jade
 
 doctype
@@ -19,10 +19,14 @@ html(lang="pt-br")
             link(href="#", rel="stylesheet", type="text/css")
             //- abaixo criamos uma condição, caso exista uma variável chamada GoogleFont, o link para uma font do google fonts é inserido, e utilizamos o valor da variável, que é o nome da fonte, para autocompletar o link.
             if GoogleFonts
-                link(href='https://fonts.googleapis.com/css?family=' + GoogleFonts, rel="stylesheet", type="text/css")
+                link(href="//fonts.googleapis.com/css?family=" + GoogleFonts, rel="stylesheet", type="text/css")
+            if jQuery
+                script(src="//code.jquery.com/jquery-1.12.0.min.js", type="javascript/text")
     body
         nav
             .wrapper
+                h1 #{PageTitle}
+                br
                 a.global-nav__header-tuts-logo-link(href="http://tutsplus.com")
                     img.global-nav__header-tuts-logo-image(alt="tuts+", src="tuts_logo.svg")
                 span.page-footer__tuts-brand-text
