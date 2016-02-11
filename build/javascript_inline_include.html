@@ -9,10 +9,7 @@
     <script>
       window.onload = function() {
           document.getElementById("JSTest").innerHTML = "<i>Testando JS inline</i>";
-          console.log(JSTest);
-          
           document.getElementById("JSTest2").innerHTML = "<b>Testando JS inline2</b>";
-          console.log(JSTest2);
       }
     </script>
   </head>
@@ -20,10 +17,11 @@
     <nav>
       <div class="wrapper">
         <h1>Revisando Jade - JavaScript inline ou com import</h1><br><a href="http://tutsplus.com" class="global-nav__header-tuts-logo-link">
-          <!-- img.global-nav__header-tuts-logo-image(alt="tuts+", src="https://d21buns5ku92am.cloudfront.net/34298/images/128532-7f6ee8e3-b737-43d0-ab8a-a21781176ebf-tuts_logo-medium-1398200175.png")--></a><span class="page-footer__tuts-brand-text">asdasd - importanto headertext.jade</span>
+          <!-- img.global-nav__header-tuts-logo-image(alt="tuts+", src="https://d21buns5ku92am.cloudfront.net/34298/images/128532-7f6ee8e3-b737-43d0-ab8a-a21781176ebf-tuts_logo-medium-1398200175.png")--></a><span class="page-footer__tuts-brand-text">content in headertext.jade - @ headertext.jade</span>
       </div>
     </nav>
-    <main class="wrapper"> - importando content.jade
+    <main class="wrapper">
+      <h2>Testando JavaScript inline ou com import</h2>
       <div id="JSTest"></div>
       <div id="JSTest2"></div>
     </main>

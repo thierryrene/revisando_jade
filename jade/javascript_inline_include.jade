@@ -1,24 +1,26 @@
-//- testando a alterações nas configurações via variável - parte 2
+//- testando JavaScript inline ou com import
 
 extends template_base_include
 
 block append config
     - var PageTitle = "Revisando Jade - JavaScript inline ou com import"
-    - var jQuery = false
-    
+//- até aqui apenas carregamos o template básico que criamos desde o início, alterando o título com base na variável
+
+//- editamos o block content
 block append content
-    div#JSTest
-    div#JSTest2
-    
+    //- aqui utilizamos o block content novamente para substituir o texto declarado anteriormente pelo texto declarado logo após no elemento h2
+    block content
+        h2 Testando JavaScript inline ou com import
+        //- criamos duas divs com ID's individuais para aplicar o código JS
+        div#JSTest
+        div#JSTest2
+
+//- criamos no arquivo template_base_include.jade, um novo block chamado scriptags. aqui editamos o block com o recurso append.
 block append scripttags
+    //- abaixo declaramos a tag script, seguida de um ponto final, que indica que tudo que vem despois deste é código.
     script.
         window.onload = function() {
             document.getElementById("JSTest").innerHTML = "<i>Testando JS inline</i>";
-            console.log(JSTest);
-            
             document.getElementById("JSTest2").innerHTML = "<b>Testando JS inline2</b>";
-            console.log(JSTest2);
         }
-        
-        
-        
+
