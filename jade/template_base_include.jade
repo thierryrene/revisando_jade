@@ -16,19 +16,20 @@ html(lang="pt-br")
         meta(name="description", content=MetaDesc)
         block metatags
         block linktags
-            link(href="#", rel="stylesheet", type="text/css")
+            link(href="style.css", rel="stylesheet", type="text/css")
             //- abaixo criamos uma condição, caso exista uma variável chamada GoogleFont, o link para uma font do google fonts é inserido, e utilizamos o valor da variável, que é o nome da fonte, para autocompletar o link.
             if GoogleFonts
                 link(href="//fonts.googleapis.com/css?family=" + GoogleFonts, rel="stylesheet", type="text/css")
             if jQuery
-                script(src="//code.jquery.com/jquery-1.12.0.min.js", type="javascript/text")
+                script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.js", type="javascript/text")
+        block scripttags
     body
         nav
             .wrapper
                 h1 #{PageTitle}
                 br
                 a.global-nav__header-tuts-logo-link(href="http://tutsplus.com")
-                    img.global-nav__header-tuts-logo-image(alt="tuts+", src="tuts_logo.svg")
+                    // img.global-nav__header-tuts-logo-image(alt="tuts+", src="https://d21buns5ku92am.cloudfront.net/34298/images/128532-7f6ee8e3-b737-43d0-ab8a-a21781176ebf-tuts_logo-medium-1398200175.png")
                 span.page-footer__tuts-brand-text
                     //- note que apontamos para um arquivo localizado em uma pasta de nome include. não é necessário especificar a extensão do arquivo que deve ser incluso, a não ser que não se trate de um arquivo .jade (exemplo, .md)
                     include include/headertext

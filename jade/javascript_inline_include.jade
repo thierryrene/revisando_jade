@@ -1,0 +1,24 @@
+//- testando a alterações nas configurações via variável - parte 2
+
+extends template_base_include
+
+block append config
+    - var PageTitle = "Revisando Jade - JavaScript inline ou com import"
+    - var jQuery = false
+    
+block append content
+    div#JSTest
+    div#JSTest2
+    
+block append scripttags
+    script.
+        window.onload = function() {
+            document.getElementById("JSTest").innerHTML = "<i>Testando JS inline</i>";
+            console.log(JSTest);
+            
+            document.getElementById("JSTest2").innerHTML = "<b>Testando JS inline2</b>";
+            console.log(JSTest2);
+        }
+        
+        
+        
