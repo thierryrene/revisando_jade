@@ -1,0 +1,12 @@
+//- testando filtro de linguagens no arquivo .jade
+
+extends template_base_include
+
+block append config
+    - var PageTitle = "Revisando Jade - HTML inline"
+//- até aqui apenas carregamos o template básico que criamos desde o início, alterando o título com base na variável
+
+//- editamos o block content
+block append content
+    block content
+        
