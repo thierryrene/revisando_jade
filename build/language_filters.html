@@ -4,17 +4,101 @@
     <title>Revisando Jade - filtro de linguagens no arquivo .jade
     </title>
     <meta name="description" content="Meta descrição padrão via config.jade">
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/journal/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   </head>
-  <body>
+  <body class="container">
     <nav>
       <div class="wrapper">
-        <h1>Revisando Jade - filtro de linguagens no arquivo .jade</h1><br><a href="http://tutsplus.com" class="global-nav__header-tuts-logo-link">
+        <h1>Revisando Jade - filtro de linguagens no arquivo .jade</h1><br><a href="http://tutsplus.com" class="logo-link">
           <!-- img.global-nav__header-tuts-logo-image(alt="tuts+", src="https://d21buns5ku92am.cloudfront.net/34298/images/128532-7f6ee8e3-b737-43d0-ab8a-a21781176ebf-tuts_logo-medium-1398200175.png")--></a><span class="page-footer__tuts-brand-text">content in headertext.jade - @ headertext.jade</span>
       </div>
     </nav>
     <main class="wrapper">
+      <script>(function() {
+  var cubes, list, math, num, number, opposite, race, square,
+    __slice = [].slice;
+
+  number = 42;
+
+  opposite = true;
+
+  if (opposite) {
+    number = -42;
+  }
+
+  square = function(x) {
+    return x * x;
+  };
+
+  list = [1, 2, 3, 4, 5];
+
+  math = {
+    root: Math.sqrt,
+    square: square,
+    cube: function(x) {
+      return x * square(x);
+    }
+  };
+
+  race = function() {
+    var runners, winner;
+    winner = arguments[0], runners = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+    return print(winner, runners);
+  };
+
+  if (typeof elvis !== "undefined" && elvis !== null) {
+    alert("I knew it!");
+  }
+
+  cubes = (function() {
+    var _i, _len, _results;
+    _results = [];
+    for (_i = 0, _len = list.length; _i < _len; _i++) {
+      num = list[_i];
+      _results.push(math.cube(num));
+    }
+    return _results;
+  })();
+
+}).call(this);
+
+      </script>
+      <div>   <h1 id="heading">Heading</h1>
+<h2 id="sub-heading">Sub-heading</h2>
+<h3 id="another-deeper-heading">Another deeper heading</h3>
+<p>Paragraphs are separated
+by a blank line.
+Leave 2 spaces at the end of a line to do a<br>line break
+Text attributes <em>italic</em>, <strong>bold</strong>, 
+<code>monospace</code>, <del>strikethrough</del> .
+Shopping list:</p>
+<ul>
+<li>apples</li>
+<li>oranges</li>
+<li>pears
+Numbered list:</li>
+<li>apples</li>
+<li>oranges</li>
+<li>pears
+The rain---not the reign---in
+Spain.</li>
+</ul>
+
+      </div>
+      <div>
+        <style>.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+        </style>
+      </div>
     </main>
   </body>
 </html>

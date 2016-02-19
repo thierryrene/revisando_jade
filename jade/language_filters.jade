@@ -6,7 +6,72 @@ block append config
     - var PageTitle = "Revisando Jade - filtro de linguagens no arquivo .jade"
 //- até aqui apenas carregamos o template básico que criamos desde o início, alterando o título com base na variável
 
-//- editamos o block content
+//- editamos o block content para testar os filtros
 block append content
+    //- editamos o block content para testar os filtros
     block content
-        
+        script
+            //- a linha abaixo (:coffee) determina que após ela, estamos entrando com um código no padrão coffeescript.
+            :coffee
+                # Assignment:
+                number   = 42
+                opposite = true
+                # Conditions:
+                number = -42 if opposite
+                # Functions:
+                square = (x) -> x * x
+                # Arrays:
+                list = [1, 2, 3, 4, 5]
+                # Objects:
+                math =
+                  root:   Math.sqrt
+                  square: square
+                  cube:   (x) -> x * square x
+                # Splats:
+                race = (winner, runners...) ->
+                  print winner, runners
+                # Existence:
+                alert "I knew it!" if elvis?
+                # Array comprehensions:
+                cubes = (math.cube num for num in list)
+        div    
+            //- o parâmetro :marked determina que o código herdado deve ser interpretado na linaguagem markdown e compilado para HTML
+            :marked
+                Heading
+                =======
+                Sub-heading
+                -----------
+                ### Another deeper heading
+                Paragraphs are separated
+                by a blank line.
+                Leave 2 spaces at the end of a line to do a  
+                line break
+                Text attributes *italic*, **bold**, 
+                `monospace`, ~~strikethrough~~ .
+                Shopping list:
+                  * apples
+                  * oranges
+                  * pears
+                Numbered list:
+                  1. apples
+                  2. oranges
+                  3. pears
+                The rain---not the reign---in
+                Spain.
+        div
+            style
+                //- o parâmetro :less determina que o código herdado deve ser interpretado na linaguagem LESS e compilado para CSS
+                :less
+                    @base: #f938ab;
+                    .box-shadow(@style, @c) when (iscolor(@c)) {
+                      -webkit-box-shadow: @style @c;
+                      box-shadow:         @style @c;
+                    }
+                    .box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+                      .box-shadow(@style, rgba(0, 0, 0, @alpha));
+                    }
+                    .box {
+                      color: saturate(@base, 5%);
+                      border-color: lighten(@base, 30%);
+                      div { .box-shadow(0 0 5px, 30%) }
+                    }
