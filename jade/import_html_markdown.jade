@@ -1,0 +1,18 @@
+//- testando HTML inline no arquivo .jade
+
+extends template_base_include
+
+block append config
+    - var PageTitle = "Revisando Jade - Importando arquivos HTML e Markdown (.md)"
+//- até aqui apenas carregamos o template básico que criamos desde o início, alterando o título com base na variável
+
+//- editamos o block content
+block append content
+    block content
+        //- importamos o arquivo markdown com o recurso include.
+        //- note que definimos o filtro que deve ser utilizado para compilar o arquivo que estamos importando, diretamente no recurso include. 
+        include:marked include/markdown.md
+        
+        //- importando arquivo html. utilizamos no arquivo, o mesmo conteúdo do arquivo markdown, já compilado para HTML
+        include include/html.html
+        
