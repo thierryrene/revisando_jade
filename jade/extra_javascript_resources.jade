@@ -1,0 +1,25 @@
+//- otimizando configurações do template com JavaScript
+//- no primeiro exemplo, criamos a variável BodyClasses com uma array e dois valores (container e body_class_one). No arquivo template_base_include.jade, apontamos a variável BodyClasses, utilizando a atribuição de atributos, conforme os exemplso anteriores do tutorial. Note que este arquivo é compilado com a tag body aplicando os valores da BodyClass no atributo class do elemento.
+
+extends template_base_include
+
+block append config
+    //- até aqui apenas carregamos o template básico que criamos desde o início, alterando o título com base na variável
+    
+    //- declaramos uma nova variável com o método push do JavaScript, que vai adicionar mais dois valores ao array da variável BodyClasses, declarada no arquivo __config.jade
+    - var updateBodyClass = BodyClasses.push('body_class_two', 'body_class_three')
+    
+    //- recurso do JavaScript para concatenar valores ao valor já existente de uma variável. Para este exemplo, vamos utilizar a variável GoogleFont, já declarada no arquivo __config.jade nos tutorais anteriores. Vamos adicionar mais uma fonte ao endereço que carrega as fontes do Google Fonts.
+    - var GoogleFonts = GoogleFonts.concat('|Raleway')
+    
+    //- exemplo do recurso concat para atualizar o título e adicionar subtitulo nas páginas.
+    //- primeiro criamos uma variável com o nome da página
+    - var thisPage = 'otimizando configurações do template com JavaScript'
+    //- agora declaramos uma nova variável adionando o valor da variável thisPage a variável PageTitle
+    - var PageTitle = PageTitle.concat(' - ' + thisPage)
+    //- note no arquivo compilado que foi utilizado o valor do título, e adicionado o valor da variável para o título da página.
+    
+//- editamos o block content
+block append content
+    block content
+        h1 #{thisPage}

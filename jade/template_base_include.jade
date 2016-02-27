@@ -24,14 +24,15 @@ html(lang="pt-br")
             if jQuery
                 script(src="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/journal/bootstrap.min.css", type="javascript/text")
         block scripttags
-    body.container
+    //- utilizamos a variável BodyClass para aplicar as classes de estilo ao elemento body. Verificar o arquivo __config.jade para alterar classes.
+    body(class=BodyClasses)
         nav
             .wrapper
                 h1 #{PageTitle}
                 br
                 a.logo-link(href="http://tutsplus.com")
-                    // img.global-nav__header-tuts-logo-image(alt="tuts+", src="https://d21buns5ku92am.cloudfront.net/34298/images/128532-7f6ee8e3-b737-43d0-ab8a-a21781176ebf-tuts_logo-medium-1398200175.png")
-                span.page-footer__tuts-brand-text
+                    //- img.global-nav__header-tuts-logo-image(alt="tuts+", src="https://d21buns5ku92am.cloudfront.net/34298/images/128532-7f6ee8e3-b737-43d0-ab8a-a21781176ebf-tuts_logo-medium-1398200175.png")
+                span
                     //- note que apontamos para um arquivo localizado em uma pasta de nome include. não é necessário especificar a extensão do arquivo que deve ser incluso, a não ser que não se trate de um arquivo .jade (exemplo, .md)
                     include include/headertext
                         |  - @ headertext.jade

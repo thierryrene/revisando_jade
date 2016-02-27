@@ -1,0 +1,58 @@
+//- jade mixins
+
+extends template_base_include
+
+block append config
+    //- até aqui apenas carregamos o template básico que criamos desde o início, alterando o título com base na variável
+    
+    //- atualizamos o título da página
+    - var thisPage = 'Jade Mixins'
+    - var PageTitle = PageTitle.concat(' - ' + thisPage)
+    
+//- criamos o primeiro mixin, um menu. Note que ele é utilizado após o elemento body.
+mixin menu()
+    .navmenu
+        ul
+            li
+                a
+//- mais um componente mixin, agora uma lista.
+mixin list
+  ul
+    li foo
+    li bar
+    li baz
+
+//- exemplo de mixin com condição. Note que mais abaixo, após o elemento body, requisitamos o mixin de duas maneiras diferentes, uma definindo o block que colocamos na condição, e outra sem conteúdo no block.
+mixin article(title)
+  .article
+    .article-block
+      h1= title
+      if block
+        block
+      else
+        p no content
+
+//- exemplo de mixin declarado com atributos
+mixin link(href, name)
+  a(class!=attributes.class, href=href)= name
+
+//- editamos o block content para testar os mixins que criamos acima. cada mixin declarado é separado pela tag br.
+block append content
+    block content
+        h1 #{thisPage}
+        //- declarando o mxin menu
+        +menu()
+        br
+        //- declarando o mxin list
+        +list()
+        br
+        //- declarando o mixin article, definindo um valor para o title
+        +article('Article test')
+        br
+        //- declarando o mixin article, definindo o valor para o title e para o block
+        +article('Article test with content')
+          p This is my
+          p Amazing article
+        br
+        //- declarando o mixin link e definindo atributos. Note que o valor '/test' é atribuido a url, enquanto o valor 'testing' é atribuido ao texto do link. A Classe é atribuida no outro parenteses. 
+        +link('/test', 'testing')(class="test_class")
