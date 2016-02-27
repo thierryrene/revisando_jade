@@ -18,4 +18,4 @@ Post no Web Social Dev
 
 Link para artigo no Google Docs
 
-[Google Docs]()
+[Google Docs](https://docs.google.com/document/d/1cEimehYyye-RgsRBIeFpQa9xh9sv-P9Kv5LOGsvMktE/pub)
