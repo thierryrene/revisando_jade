@@ -1,4 +1,4 @@
-# revisando_jade
+# Revisando Jade (reposítorio de apoio ao post no blog Web Social Dev)
 
 Repositório de arquivos utilizados para revisar a linguagem Jade. Todos os arquivos gerados e utilizados durante o tutorial estão disponíveis neste repositório.
 
