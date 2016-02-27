@@ -8,9 +8,14 @@ Repositório de arquivos utilizados para revisar a linguagem Jade. Todos os arqu
 
 Todo o ambiente está criado e configurado neste repositório.
 
-Se clonar o repositório, depois basta executar o comando NPM INSTALL para instalar as dependências do projeto (grunt, jade, jstransformers, etc).
+Se clonar o repositório, depois basta executar o comando 'npm install' para instalar as dependências do projeto (grunt, jade, jstransformers, etc).
 
-Após clonar o repositório, no terminal, basta executar o comando GRUNT WATCH e iniciar a edição dos arquivos Jade.
+Após clonar o repositório, no terminal, basta executar o comando 'grunt watch' e iniciar a edição dos arquivos Jade.
 
 Post no Web Social Dev
-http://websocialdev.com/introducao-e-revisao-da-linguagem-jade/
+
+[Introdução a linguagem Jade](http://websocialdev.com/introducao-e-revisao-da-linguagem-jade/)
+
+Link para artigo no Google Docs
+
+[Google Docs]()
